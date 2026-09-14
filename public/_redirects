@@ -1,0 +1,5 @@
+# First-party proxy for the analytics script and event endpoint (Netlify rewrites).
+# Keeps provider hostnames out of the page markup, per legal copy v1.3's
+# no-provider-names check on /privacy.
+/stats/js/script.js  https://plausible.io/js/script.js  200
+/stats/api/event     https://plausible.io/api/event     200
