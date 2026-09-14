@@ -1,0 +1,13 @@
+html { -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-body);
+  font: var(--type-body);
+  text-wrap: pretty;
+}
+a { color: var(--text-link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: var(--transition-ui); }
+a:hover { color: var(--text-link-hover); }
+::selection { background: var(--n-900); color: var(--n-0); }
+:where(h1, h2, h3, h4) { margin: 0; font-weight: var(--fw-regular); }
+*:focus-visible { outline: none; box-shadow: var(--ring-focus); }

@@ -1,17 +1,139 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/landing.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+	title="AXIKA — AI Operating System for Industrial R&D"
+	description="AXIKA AI Inc. builds the AI native operating system for Design Autonomy in industrial R&D."
+>
+
+<header>
+<div class="wrap hrow">
+<div class="hbrand"><a href="#top" class="logo" aria-label="AXIKA"><span><svg fill="currentColor"><use href="#mark"></use></svg></span><span>AXIKA</span><span>ai</span></a><span class="htag">Design Autonomy for Industrial R&amp;D</span></div>
+<nav>
+<a class="lk" href="#shift">the shift</a>
+<a class="lk" href="#technology">the technology</a>
+<a class="lk" href="#approach">the approach</a>
+<a class="lk" href="#difference">the difference</a>
+<a class="navcta" href="#contact">get in touch</a>
+<a id="menuBtn" class="navcta" href="#top" role="button" aria-label="menu">menu</a>
+</nav>
+</div>
+</header>
+
+<div class="hero" id="top">
+<div class="stage">
+<div class="bg"><img id="hero-bg" class="bgimg" src="/assets/hero-ring-v2.png" alt="" fetchpriority="high" decoding="async" /><div class="scrim"></div></div>
+<div class="heroTxt">
+<h1>We scale R&amp;D<br />like compute.</h1>
+<p class="taglineHero">Design Autonomy for Industrial R&amp;D</p>
+</div>
+</div>
+</div>
+
+<section id="shift"><div class="wrap">
+<div class="cardhead">
+<span class="eyebrow bullet">the shift</span>
+<h2 class="sec">Intelligence is becoming abundant - scaling R&amp;D gets cheap fast.</h2>
+</div>
+<div class="cards">
+<div class="card"><p class="body">Frontier models and agents keep getting cheaper and more capable.<br /><br />Reasoning that used to be scarce and expensive is becoming abundant - and that makes design iteration and R&amp;D throughput cheap and fast.<br /><br />With every iteration - learning compounds feeding the optimization flywheel.</p></div>
+<div class="card"><p class="body">The effect: R&amp;D output can scale like compute.<br /><br />More options explored, more experiments run, more decisions made - better products, faster and cheaper, with the same team.</p></div>
+</div>
+</div></section>
+
+<section id="technology"><div class="wrap">
+<div class="cardhead">
+<span class="eyebrow bullet">the technology</span>
+<h2 class="sec">The AI native OS powering Design Autonomy for Industrial R&amp;D</h2>
+</div>
+<div class="cards">
+<div class="card"><p class="body">Our specialized agents run AI-native workflows that unlock the full design space, on the stack you already have.</p><p class="body">Targeting &gt;80% reduction in design cycle time — faster time to market, earlier revenue, higher market share — with the same headcount and exponential output.</p></div>
+<div class="card"><p class="body">Agents find global design optima tailored to market demand, not just incremental improvements on what already exists.</p><p class="body">Automated validation is front-loaded, so costly late design changes, non-conformance and unbuildable variants are caught before they reach the shop floor.</p></div>
+</div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+<div class="cardhead">
+<span class="eyebrow bullet">the approach</span>
+<h2 class="sec">Industrial R&amp;D at compute scale.</h2>
+</div>
+<div class="cards3">
+<div class="card"><h3 class="cardtitle">Built Around You</h3><p class="body">Every business is different. We build the system that delivers the most value to your team.</p></div>
+<div class="card"><h3 class="cardtitle">Built to Improve</h3><p class="body">Your system never stops learning. Every decision, datapoint, and correction makes it sharper. Learnings that compound let you improve exponentially.</p></div>
+<div class="card"><h3 class="cardtitle">Built to Act</h3><p class="body">AXIKA doesn´t just suggest - it executes. Reliable by design and proven in production.</p></div>
+</div>
+<div class="cards3 stack">
+<div class="card"><div class="numrow"><h3 class="cardtitle">Foundation</h3></div><p class="body">Structured context is built by unifying knowledge from internal records, publications, design history, and competitive intelligence - then sharpened with your team's tacit knowledge, expertise, and judgement.</p></div>
+<div class="card"><div class="numrow"><h3 class="cardtitle">Reasoning</h3></div><p class="body">Specialist AI agents bring clarity to complex processes by selecting relevant data, testing assumptions, identifying gaps, and structuring conclusions - with your team following the logic, encoding new strategies, and providing guidance.</p></div>
+<div class="card"><div class="numrow"><h3 class="cardtitle">Decisions</h3></div><p class="body">Your team approves and carries conclusions forward, confident every call is data-backed and grounded in the full picture - while AXIKA ensures insights compound and decisions stay transparent and traceable.</p></div>
+</div>
+</div></section>
+
+<section id="difference"><div class="wrap">
+<div class="cardhead">
+<span class="eyebrow bullet">the difference</span>
+<h2 class="sec">Results you can see. Impact you can scale.</h2>
+</div>
+<div class="cards4">
+<div class="card4"><span class="kicker">cost</span><p class="turn"><em>From expensive</em>to efficient</p><p class="body">Focus resources on what matters.</p></div>
+<div class="card4"><span class="kicker">speed</span><p class="turn"><em>From hours</em>to minutes</p><p class="body">Take busywork off your team's plate.</p></div>
+<div class="card4"><span class="kicker">accuracy</span><p class="turn"><em>From error-prone</em>to reliable</p><p class="body">Eliminate guesswork and fat-fingers.</p></div>
+<div class="card4"><span class="kicker">scale</span><p class="turn"><em>From 9 to 5</em>to 24/7</p><p class="body">Unlock scale and capacity.</p></div>
+</div>
+</div></section>
+
+<div class="dark">
+<div class="darkbg"><img id="contact-bg" class="bgimg" src="/assets/contact-ring-dark.png" alt="" loading="lazy" decoding="async" /></div>
+<section id="contact" style="border:0;position:relative">
+<div class="wrap contact">
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:24px"><span class="chip">contact us</span></div>
+<h2>Ready to scale<br />your R&amp;D?</h2>
+<p class="taglineDark">Design Autonomy for Industrial R&amp;D</p>
+</div>
+<form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<p class="hidden" aria-hidden="true"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+<div class="field"><input name="name" type="text" placeholder="Name" autocomplete="name" required /></div>
+<div class="field"><input name="email" type="email" placeholder="Email" autocomplete="email" required /></div>
+<div class="field"><input name="company" type="text" placeholder="Company name" autocomplete="organization" /></div>
+<div class="field"><textarea name="message" rows="2" placeholder="Tell us more about yourself and your goals…" required></textarea></div>
+<button type="submit">Submit</button>
+<p class="formnote" id="formnote">We handle your details as described in our <a href="/privacy">Privacy Policy</a>.</p>
+</form>
+</div></section>
+
+<Footer />
+</div>
+
+<script is:inline>
+document.getElementById('menuBtn').addEventListener('click',function(e){e.preventDefault();this.closest('nav').classList.toggle('open')});
+document.querySelectorAll('nav a.lk').forEach(function(a){a.addEventListener('click',function(){a.closest('nav').classList.remove('open')})});
+/* Fit the dark-panel ring image so its top edge lands on the Name field and its
+   bottom edge on the Press & speaking row, at any viewport width. The ring
+   occupies y 0.102-0.884 of the source image. */
+(function(){
+  var slot=document.getElementById('contact-bg'),dark=document.querySelector('.dark');
+  if(!slot||!dark)return;
+  var TOP=0.102,BOT=0.884,AR=1536/1024;
+  function fit(){
+    if(innerWidth<=1000){slot.style.removeProperty('--ringTop');slot.style.removeProperty('--ringW');return}
+    var name=document.querySelector('#contactForm input[name=name]');
+    var press=[].slice.call(document.querySelectorAll('footer .flist span')).filter(function(s){return /press/i.test(s.textContent)})[0];
+    if(!name||!press)return;
+    var d=dark.getBoundingClientRect(),T=name.getBoundingClientRect().top-d.top,B=press.getBoundingClientRect().bottom-d.top;
+    /* Cap the RING's width (it spans x 0.409-0.890 of the source), not the whole
+       image box — the empty left backdrop may clip past the panel edge. */
+    var h=(B-T)/(BOT-TOP),w=h*AR,max=d.width*0.72/0.481;
+    if(w>max){w=max;h=w/AR}
+    slot.style.setProperty('--ringW',w.toFixed(1)+'px');
+    slot.style.setProperty('--ringTop',(T-TOP*h).toFixed(1)+'px');
+  }
+  fit();addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+})();
+</script>
+
+</Layout>

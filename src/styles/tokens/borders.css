@@ -1,0 +1,21 @@
+:root {
+  /* Hairlines carry all structure. No decorative strokes. */
+  --bw-hair: 1px; /* @kind other */
+  --bw-rule: 1px; /* @kind other */
+  --bw-heavy: 2px; /* @kind other */
+
+  --border-strong: var(--bw-hair) solid var(--line-strong);
+  --border-quiet: var(--bw-hair) solid var(--line-quiet);
+  --border-mid: var(--bw-hair) solid var(--line-mid);
+
+  --radius-0: 0px;
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 8px;
+  --radius-pill: 999px;
+
+  /* Elevation is a border, not a shadow. One exception: true overlays. */
+  --shadow-none: none;
+  --shadow-overlay: 0 24px 64px rgba(0, 0, 0, 0.18);
+  --ring-focus: 0 0 0 2px var(--n-0), 0 0 0 4px var(--line-focus);
+}

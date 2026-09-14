@@ -1,0 +1,19 @@
+/* Self-hosted fonts (all OFL-licensed) — replaces the Google Fonts @import,
+   per HANDOFF-NOTES.md §1: no third-party font CDN may receive visitor requests. */
+@import "@fontsource/space-grotesk/300.css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/open-sans/400.css";
+@import "@fontsource/open-sans/600.css";
+@import "@fontsource/open-sans/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
+/* Design tokens — mirrors the design system's styles.css */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/borders.css";
+@import "./tokens/motion.css";
+@import "./tokens/base.css";

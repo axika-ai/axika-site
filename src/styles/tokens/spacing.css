@@ -1,0 +1,19 @@
+:root {
+  /* 6px base — matches the deck's hairline gutters */
+  --sp-1: 3px;
+  --sp-2: 6px;
+  --sp-3: 12px;
+  --sp-4: 18px;
+  --sp-5: 24px;
+  --sp-6: 36px;
+  --sp-7: 48px;
+  --sp-8: 72px;
+  --sp-9: 96px;
+  --sp-10: 144px;
+
+  /* Layout */
+  --gutter: var(--sp-5);
+  --page-pad: var(--sp-7);
+  --measure: 62ch; /* @kind other */
+  --slide-pad: 56px;
+}
