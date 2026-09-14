@@ -1,6 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
+import heroRing from '../assets/hero-ring-v2.png';
+import contactRing from '../assets/contact-ring-dark.png';
 import '../styles/landing.css';
 ---
 
@@ -25,7 +28,7 @@ import '../styles/landing.css';
 
 <div class="hero" id="top">
 <div class="stage">
-<div class="bg"><img id="hero-bg" class="bgimg" src="/assets/hero-ring-v2.png" alt="" fetchpriority="high" decoding="async" /><div class="scrim"></div></div>
+<div class="bg"><Image id="hero-bg" class="bgimg" src={heroRing} alt="" quality={85} loading="eager" fetchpriority="high" /><div class="scrim"></div></div>
 <div class="heroTxt">
 <h1>We scale R&amp;D<br />like compute.</h1>
 <p class="taglineHero">Design Autonomy for Industrial R&amp;D</p>
@@ -86,7 +89,7 @@ import '../styles/landing.css';
 </div></section>
 
 <div class="dark">
-<div class="darkbg"><img id="contact-bg" class="bgimg" src="/assets/contact-ring-dark.png" alt="" loading="lazy" decoding="async" /></div>
+<div class="darkbg"><Image id="contact-bg" class="bgimg" src={contactRing} alt="" quality={85} loading="lazy" /></div>
 <section id="contact" style="border:0;position:relative">
 <div class="wrap contact">
 <div style="display:flex;flex-direction:column">
@@ -147,6 +150,26 @@ document.querySelectorAll('nav a.lk').forEach(function(a){a.addEventListener('cl
   var f=document.getElementById('contactForm');
   if(f)f.addEventListener('submit',function(){plausible('Contact Form Submit')});
 })();
+</script>
+
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AXIKA AI Inc.",
+  "alternateName": "AXIKA",
+  "url": "https://axika.ai/",
+  "logo": "https://axika.ai/assets/axika-logo.png",
+  "email": "hello@axika.ai",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2261 Market Street STE 76853",
+    "addressLocality": "San Francisco",
+    "addressRegion": "CA",
+    "postalCode": "94114",
+    "addressCountry": "US"
+  }
+}
 </script>
 
 </Layout>
