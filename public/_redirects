@@ -1,0 +1,3 @@
+# First-party paths for the analytics script and event endpoint (Netlify rewrites).
+/stats/js/script.js  https://plausible.io/js/script.js  200
+/stats/api/event     https://plausible.io/api/event     200

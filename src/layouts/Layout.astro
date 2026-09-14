@@ -18,6 +18,8 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		{/* Cookieless site analytics, loaded via first-party paths — see public/_redirects. */}
+		<script is:inline defer data-domain="axika.ai" data-api="/stats/api/event" src="/stats/js/script.js"></script>
 	</head>
 	<body>
 		<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
