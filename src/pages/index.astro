@@ -134,6 +134,19 @@ document.querySelectorAll('nav a.lk').forEach(function(a){a.addEventListener('cl
   fit();addEventListener('resize',fit);
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
 })();
+/* Analytics events: section visibility (event name + section id) and form
+   submission (event name only). Never attach form field contents or any
+   other personal data to an event. */
+(function(){
+  window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};
+  var seen={};
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){
+    if(e.isIntersecting&&!seen[e.target.id]){seen[e.target.id]=1;plausible('Section View: '+e.target.id);obs.unobserve(e.target)}
+  })},{threshold:0.2});
+  ['shift','technology','approach','difference','contact'].forEach(function(id){var el=document.getElementById(id);if(el)obs.observe(el)});
+  var f=document.getElementById('contactForm');
+  if(f)f.addEventListener('submit',function(){plausible('Contact Form Submit')});
+})();
 </script>
 
 </Layout>
