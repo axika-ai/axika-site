@@ -1,0 +1,45 @@
+:root {
+  /* Achromatic ramp — warm graphite. The whole brand lives here. */
+  --n-0: #FFFFFF;
+  --n-25: #FAFAF9;
+  --n-50: #F4F4F2;
+  --n-100: #EAEAE7;
+  --n-200: #D8D8D4;
+  --n-300: #BCBCB7;
+  --n-400: #97978F;
+  --n-500: #6F6F68;
+  --n-600: #4C4C46;
+  --n-700: #2E2E2A;
+  --n-800: #1A1A18;
+  --n-900: #000000;
+
+  /* Signal — functional only, never decorative. Bauhaus primaries, desaturated. */
+  --sig-alert: #C1291D;
+  --sig-warn: #A87400;
+  --sig-ok: #1F6248;
+  --sig-info: #1B3FA8;
+
+  /* Semantic surfaces */
+  --surface-page: var(--n-0);
+  --surface-sunken: var(--n-50);
+  --surface-card: var(--n-0);
+  --surface-inverse: var(--n-900);
+  --surface-hover: var(--n-50);
+  --surface-active: var(--n-100);
+  --surface-disabled: var(--n-50);
+
+  /* Semantic text */
+  --text-body: var(--n-900);
+  --text-muted: var(--n-500);
+  --text-quiet: var(--n-400);
+  --text-inverse: var(--n-0);
+  --text-link: var(--n-900);
+  --text-link-hover: var(--n-600);
+  --text-disabled: var(--n-300);
+
+  /* Semantic lines */
+  --line-strong: var(--n-900);
+  --line-mid: var(--n-300);
+  --line-quiet: var(--n-200);
+  --line-focus: var(--n-900);
+}

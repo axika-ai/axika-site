@@ -1,0 +1,14 @@
+/* Fonts are SELF-HOSTED via @fontsource packages (imported in global.css) —
+   no fonts.googleapis.com / fonts.gstatic.com requests, per HANDOFF-NOTES.md §1.
+   All three families are open-licensed (OFL). */
+
+/* SUBSTITUTION NOTE
+   The source deck embeds Open Sans (Regular / Bold) only; no brand font files were
+   supplied. Space Grotesk (display) and IBM Plex Mono (technical) are chosen substitutes
+   for the geometric / engineering-drawing register the brand asks for. Replace with
+   real @font-face rules if licensed brand fonts exist. */
+:root {
+  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-text: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}

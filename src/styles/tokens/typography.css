@@ -1,0 +1,45 @@
+:root {
+  /* Sizes — 1.25 major-third-ish ramp, snapped to whole px */
+  --fs-11: 11px;
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-22: 22px;
+  --fs-28: 28px;
+  --fs-36: 36px;
+  --fs-48: 48px;
+  --fs-64: 64px;
+  --fs-88: 88px;
+
+  --lh-tight: 1.06; /* @kind font */
+  --lh-snug: 1.2; /* @kind font */
+  --lh-body: 1.5; /* @kind font */
+  --lh-loose: 1.65; /* @kind font */
+
+  --fw-light: 300; /* @kind font */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700; /* @kind font */
+
+  /* Tracking — display is tightened, small caps-labels are opened up */
+  --tr-display: -0.02em; /* @kind font */
+  --tr-tight: -0.01em; /* @kind font */
+  --tr-normal: 0; /* @kind font */
+  --tr-label: 0.08em; /* @kind font */
+  --tr-wordmark: 0.06em; /* @kind font */
+
+  /* Semantic roles */
+  --type-wordmark: var(--fw-light) var(--fs-48)/var(--lh-tight) var(--font-display);
+  --type-display: var(--fw-light) var(--fs-64)/var(--lh-tight) var(--font-display);
+  --type-h1: var(--fw-regular) var(--fs-36)/var(--lh-snug) var(--font-display);
+  --type-h2: var(--fw-regular) var(--fs-28)/var(--lh-snug) var(--font-display);
+  --type-h3: var(--fw-semibold) var(--fs-18)/var(--lh-snug) var(--font-text);
+  --type-body: var(--fw-regular) var(--fs-16)/var(--lh-body) var(--font-text);
+  --type-body-sm: var(--fw-regular) var(--fs-14)/var(--lh-body) var(--font-text);
+  --type-caption: var(--fw-regular) var(--fs-12)/var(--lh-body) var(--font-text);
+  --type-label: var(--fw-semibold) var(--fs-11)/1.2 var(--font-text);
+  --type-data: var(--fw-medium) var(--fs-14)/1.3 var(--font-mono);
+}

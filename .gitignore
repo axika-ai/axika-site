@@ -17,6 +17,10 @@ pnpm-debug.log*
 .env
 .env.production
 
+# local Claude Design export (source material incl. private uploads — not site code)
+AXIKA Design System/
+AXIKA Design System.zip
+
 # macOS-specific files
 .DS_Store
 

@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+		<symbol id="mark" viewBox="0 0 100 100"><path d="M29.83 8.66A46 46 0 1 1 15.82 19.22L16.84 27.63A40 40 0 1 0 37.64 11.96Z"></path></symbol>
+		<symbol id="markThin" viewBox="0 0 100 100"><path d="M29.83 8.66A46 46 0 1 1 15.82 19.22L14.35 25.96A43 43 0 1 0 36.71 9.10Z"></path></symbol>
+		</defs></svg>
+		<slot />
+	</body>
+</html>
