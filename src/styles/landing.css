@@ -46,7 +46,6 @@ h1{font:var(--fw-light) clamp(30px,4.4vw,68px)/1.06 var(--font-display);letter-s
 .heroSub{margin-top:18px;font:var(--fw-regular) clamp(12px,1vw,15px)/1.5 var(--font-text);color:var(--n-500)}
 .taglineHero{margin-top:20px;font:var(--fw-semibold) clamp(11px,1.15vw,18px)/1.35 var(--font-text);letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
 .taglineDark{margin:22px 0 0;font:var(--fw-semibold) clamp(12px,1.1vw,16px)/1.4 var(--font-text);letter-spacing:.14em;text-transform:uppercase;color:var(--n-0)}
-.contact .body{margin-top:18px;color:rgba(255,255,255,.78)}
 .heroTop{position:absolute;top:32px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;gap:24px;pointer-events:none}
 .boxes{display:flex;border-top:1px solid var(--ink)}
 .boxes div{flex:1;border-left:1px solid var(--hair);padding:22px 22px 26px;min-height:132px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
