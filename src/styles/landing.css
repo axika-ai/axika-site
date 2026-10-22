@@ -37,11 +37,14 @@ nav #menuBtn:hover{background:var(--ink)}
 .rules{position:absolute;inset:66px 0 0;pointer-events:none}
 .rules i{position:absolute;top:0;bottom:0;width:1px;background:var(--n-100)}
 .stage{position:relative;height:calc(100vh - 66px);min-height:600px;display:grid;place-items:center start;padding:0 var(--pad)}
-.bg{position:absolute;inset:0;overflow:hidden}
-.bg .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:translateX(var(--heroShift))}
-@media(max-width:1000px){.bg .bgimg{inset:12% 0 auto 0;height:62%}}
+.bg{position:absolute;inset:0;overflow:hidden;container-type:size}
+/* Scale origin sits on the ring's visible right edge (x 0.95 of the source, AR 4:3), so shrinking
+   keeps it anchored right: origin = 50cqw + 0.45*min(100cqw, 133.3cqh) = contain-fit draw width. */
+.bg .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:translateX(var(--heroShift)) scale(.8);transform-origin:calc(50cqw + min(45cqw,60cqh)) 50%}
+@media(max-width:1000px){.bg .bgimg{inset:12% 0 auto 0;height:62%;transform:none}}
 .scrim{position:absolute;inset:0;background:rgba(255,255,255,0);pointer-events:none}
-.heroTxt{position:relative;text-align:left;width:min(46%,600px);margin-left:var(--heroShift);container-type:inline-size}
+/* 161px = left edge of the header tag's square bullet; the stage already pads by --pad */
+.heroTxt{position:relative;text-align:left;width:min(46%,600px);margin-left:calc(161px - var(--pad));container-type:inline-size}
 h1{font:var(--fw-light) clamp(30px,4.4vw,68px)/1.06 var(--font-display);letter-spacing:var(--tr-display)}
 /* "Design Autonomy for" is 9.81em wide; 10.1cqi keeps it on one line at any column width */
 .heroTxt h1{font-size:min(clamp(30px,4.4vw,68px),10.1cqi);white-space:nowrap}
@@ -146,7 +149,7 @@ footer{border-top:1px solid rgba(255,255,255,.18)}
 
 @media(max-width:1000px){
 .stage{place-items:start start;padding-top:6vh}
-.heroTxt{width:min(78%,560px);text-align:left}
+.heroTxt{width:min(78%,560px);text-align:left;margin-left:0}
 :root{--heroShift:0px}
 .htag{display:none}
 .taglineHero{letter-spacing:.1em;margin-top:16px}
