@@ -1,0 +1,29 @@
+# AXIKA — Design Autonomy for Dark Factories
+
+Rendered text of https://axika.ai/ (static copy, updated with every copy change).
+
+## Hero
+
+# Design Autonomy for Dark Factories.
+
+Specialized AI moving atoms at speed and precision.
+
+## What we build
+
+**Products designed to be built with no one on the floor.**
+
+Dark factories run without people on the shop floor. They need products engineered, validated and certified at machine speed — and born manufacturable.
+
+AXIKA's specialized AI agents do that work on the engineering tools manufacturers already run, grounded in the company's own design history, factory and supply chain. Humans set the intent and sign the result.
+
+Built for advanced manufacturing: complex products, thousands of parts, high variant count, hard compliance.
+
+Design autonomy means AI systems carry a product from design intent through engineering, validation and certification, with people only at intent and sign-off.
+
+## Contact
+
+**Building for dark factories? Let's talk.**
+
+Design Autonomy for Dark Factories
+
+Contact: hello@axika.ai — or the form at https://axika.ai/#contact

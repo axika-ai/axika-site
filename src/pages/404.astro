@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/legal.css';
+---
+
+<Layout
+	title="Page not found — AXIKA AI"
+	description="This page does not exist."
+	robots="noindex,follow"
+>
+
+<header>
+<div class="wrap hrow">
+<div class="hbrand"><a href="/" class="logo" aria-label="AXIKA"><span><svg fill="currentColor"><use href="#mark"></use></svg></span><span>AXIKA</span><span>AI</span></a><span class="htag">Design Autonomy for Dark Factories</span></div>
+<nav><a class="navcta" href="/">back to site</a></nav>
+</div>
+</header>
+
+<main class="doc"><div class="wrap">
+<div class="dochead">
+<span class="eyebrow bullet">404</span>
+<h1>Nothing here.</h1>
+<p class="lede"><a href="/">Back to AXIKA.</a></p>
+</div>
+</div></main>
+
+<div class="dark">
+<Footer home="/" />
+</div>
+
+</Layout>

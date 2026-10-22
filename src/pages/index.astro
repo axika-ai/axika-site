@@ -5,6 +5,67 @@ import Footer from '../components/Footer.astro';
 import heroRing from '../assets/hero-ring-v2.png';
 import contactRing from '../assets/contact-ring-dark.png';
 import '../styles/landing.css';
+
+const buildDate = new Date().toISOString().slice(0, 10);
+const schema = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'Organization',
+			'@id': 'https://axika.ai/#org',
+			name: 'AXIKA AI',
+			legalName: 'AXIKA AI Inc.',
+			url: 'https://axika.ai/',
+			logo: 'https://axika.ai/og.png',
+			slogan: 'Design Autonomy for Dark Factories',
+			description:
+				'AXIKA AI builds Design Autonomy for Dark Factories in Advanced Manufacturing — specialised AI that designs, engineers and validates industrial products on the engineering tools manufacturers already run.',
+			foundingDate: '2026-05',
+			foundingLocation: { '@type': 'Place', name: 'San Francisco, California, USA' },
+			address: { '@type': 'PostalAddress', addressLocality: 'San Francisco', addressRegion: 'CA', addressCountry: 'US' },
+			founder: { '@id': 'https://axika.ai/#founder' },
+			email: 'hello@axika.ai',
+			sameAs: ['https://www.linkedin.com/company/axika-ai', 'https://github.com/axika-ai'],
+			knowsAbout: [
+				'Design autonomy',
+				'Dark factories',
+				'Advanced manufacturing',
+				'Industrial AI',
+				'Agentic engineering',
+				'Computer-aided engineering',
+				'Product lifecycle management',
+			],
+		},
+		{
+			'@type': 'Person',
+			'@id': 'https://axika.ai/#founder',
+			name: 'Pina Schlombs',
+			jobTitle: 'Founder & CEO',
+			worksFor: { '@id': 'https://axika.ai/#org' },
+			alumniOf: { '@type': 'CollegeOrUniversity', name: 'Technische Universität Berlin' },
+			sameAs: ['https://www.linkedin.com/in/pinaschlombs/'],
+			description:
+				'Founder and CEO of AXIKA AI. Previously built the Industrial AI business at Siemens Digital Industries Software; R&D engineer at Siemens Energy and Volkswagen.',
+		},
+		{
+			'@type': 'WebSite',
+			'@id': 'https://axika.ai/#website',
+			url: 'https://axika.ai/',
+			name: 'AXIKA AI',
+			publisher: { '@id': 'https://axika.ai/#org' },
+			inLanguage: 'en',
+		},
+		{
+			'@type': 'WebPage',
+			'@id': 'https://axika.ai/#home',
+			url: 'https://axika.ai/',
+			name: 'AXIKA — Design Autonomy for Dark Factories',
+			isPartOf: { '@id': 'https://axika.ai/#website' },
+			about: { '@id': 'https://axika.ai/#org' },
+			dateModified: buildDate,
+		},
+	],
+};
 ---
 
 <Layout
@@ -25,7 +86,7 @@ import '../styles/landing.css';
 
 <div class="hero" id="top">
 <div class="stage">
-<div class="bg"><Image id="hero-bg" class="bgimg" src={heroRing} alt="" quality={85} loading="eager" fetchpriority="high" /><div class="scrim"></div></div>
+<div class="bg"><Image id="hero-bg" class="bgimg" src={heroRing} alt="AXIKA ring mark" quality={85} loading="eager" fetchpriority="high" /><div class="scrim"></div></div>
 <div class="heroTxt">
 <h1>Design Autonomy for<br />Dark Factories.</h1>
 <p class="taglineHero">Specialized AI moving atoms at speed and precision.</p>
@@ -40,12 +101,12 @@ import '../styles/landing.css';
 </div>
 <div class="cards">
 <div class="card"><p class="body">Dark factories run without people on the shop floor. They need products engineered, validated and certified at machine speed — and born manufacturable.</p><p class="body">AXIKA's specialized AI agents do that work on the engineering tools manufacturers already run, grounded in the company's own design history, factory and supply chain. Humans set the intent and sign the result.</p></div>
-<div class="card"><p class="body">Built for advanced manufacturing: complex products, thousands of parts, high variant count, hard compliance.</p></div>
+<div class="card"><p class="body">Built for advanced manufacturing: complex products, thousands of parts, high variant count, hard compliance.</p><p class="body">Design autonomy means AI systems carry a product from design intent through engineering, validation and certification, with people only at intent and sign-off.</p></div>
 </div>
 </div></section>
 
 <div class="dark">
-<div class="darkbg"><Image id="contact-bg" class="bgimg" src={contactRing} alt="" quality={85} loading="lazy" /></div>
+<div class="darkbg"><Image id="contact-bg" class="bgimg" src={contactRing} alt="AXIKA ring mark" quality={85} loading="lazy" /></div>
 <section id="contact" style="border:0;position:relative">
 <div class="wrap contact">
 <div style="display:flex;flex-direction:column">
@@ -108,22 +169,6 @@ document.querySelectorAll('nav a.lk').forEach(function(a){a.addEventListener('cl
 })();
 </script>
 
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "AXIKA AI Inc.",
-  "alternateName": "AXIKA",
-  "url": "https://axika.ai/",
-  "logo": "https://axika.ai/assets/axika-logo.png",
-  "email": "hello@axika.ai",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  }
-}
-</script>
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 
 </Layout>

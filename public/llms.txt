@@ -1,0 +1,20 @@
+# AXIKA AI
+
+> AXIKA AI builds Design Autonomy for Dark Factories in Advanced Manufacturing: specialised AI that designs, engineers and validates industrial products on the engineering tools manufacturers already run (CAD, CAE, PLM). Humans set the intent and sign the result.
+
+- Company: AXIKA AI Inc., Delaware C-corporation, San Francisco, founded 2026.
+- Founder & CEO: Pina Schlombs — previously built the Industrial AI business at Siemens Digital Industries Software; R&D engineer at Siemens Energy and Volkswagen.
+- One line: Design Autonomy for Dark Factories.
+- Stage: first paid pilot in execution (2026). Backed by a16z speedrun scouts.
+- Contact: hello@axika.ai
+
+## Pages
+
+- [Home](https://axika.ai/): what AXIKA builds, how to get in touch.
+- [Privacy](https://axika.ai/privacy)
+- [Terms](https://axika.ai/terms)
+
+## Definitions
+
+- Design Autonomy: AI systems that carry a product from design intent through engineering, validation and certification with humans only at intent and sign-off.
+- Dark factory: a production facility that runs with no people on the shop floor; it needs products designed and proven to be built that way.
