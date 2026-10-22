@@ -21,6 +21,7 @@ pnpm-debug.log*
 AXIKA Design System/
 AXIKA Design System.zip
 docs/
+gtm/
 
 # macOS-specific files
 .DS_Store
