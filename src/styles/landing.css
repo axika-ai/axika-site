@@ -50,6 +50,8 @@ h1{font:var(--fw-light) clamp(30px,4.4vw,68px)/1.06 var(--font-display);letter-s
 .heroTxt h1{font-size:min(clamp(30px,4.4vw,68px),10.1cqi);white-space:nowrap}
 .heroSub{margin-top:18px;font:var(--fw-regular) clamp(12px,1vw,15px)/1.5 var(--font-text);color:var(--n-500)}
 .taglineHero{margin-top:20px;font:var(--fw-semibold) clamp(11px,1.15vw,18px)/1.35 var(--font-text);letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+/* The tagline is 35.4em wide as one line; 2.81cqi keeps it on one line within the column */
+.heroTxt .taglineHero{font-size:min(clamp(11px,1.15vw,18px),2.81cqi);white-space:nowrap}
 .taglineDark{margin:22px 0 0;font:var(--fw-semibold) clamp(12px,1.1vw,16px)/1.4 var(--font-text);letter-spacing:.14em;text-transform:uppercase;color:var(--n-0)}
 .heroTop{position:absolute;top:32px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;gap:24px;pointer-events:none}
 .boxes{display:flex;border-top:1px solid var(--ink)}
@@ -153,6 +155,7 @@ footer{border-top:1px solid rgba(255,255,255,.18)}
 :root{--heroShift:0px}
 .htag{display:none}
 .taglineHero{letter-spacing:.1em;margin-top:16px}
+.heroTxt .taglineHero{font-size:clamp(11px,1.15vw,18px);white-space:normal}
 .boxes,.cols,.grid3,.contact,.grid2{grid-template-columns:1fr;display:grid}
 .boxes div,.col,.grid3>div{border-left:0;border-top:1px solid var(--hair)}
 .boxes div:first-child,.col:first-child,.grid3>div:first-child{border-top:0}
