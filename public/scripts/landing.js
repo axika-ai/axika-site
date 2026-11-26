@@ -1,8 +1,8 @@
 document.getElementById('menuBtn').addEventListener('click',function(e){e.preventDefault();this.closest('nav').classList.toggle('open')});
 document.querySelectorAll('nav a.lk').forEach(function(a){a.addEventListener('click',function(){a.closest('nav').classList.remove('open')})});
 /* Fit the dark-panel ring image so its top edge lands on the Name field and its
-   bottom edge on the Press & speaking row, at any viewport width. The ring
-   occupies y 0.102-0.884 of the source image. */
+   bottom edge on the lowest row of the footer columns, at any viewport width.
+   The ring occupies y 0.102-0.884 of the source image. */
 (function(){
   var slot=document.getElementById('contact-bg'),dark=document.querySelector('.dark');
   if(!slot||!dark)return;
@@ -10,9 +10,10 @@ document.querySelectorAll('nav a.lk').forEach(function(a){a.addEventListener('cl
   function fit(){
     if(innerWidth<=1000){slot.style.removeProperty('--ringTop');slot.style.removeProperty('--ringW');return}
     var name=document.querySelector('#contactForm input[name=name]');
-    var press=[].slice.call(document.querySelectorAll('footer .flist span')).filter(function(s){return /press/i.test(s.textContent)})[0];
-    if(!name||!press)return;
-    var d=dark.getBoundingClientRect(),T=name.getBoundingClientRect().top-d.top,B=press.getBoundingClientRect().bottom-d.top;
+    var rows=document.querySelectorAll('footer .fgrid > div > :last-child');
+    if(!name||!rows.length)return;
+    var d=dark.getBoundingClientRect(),T=name.getBoundingClientRect().top-d.top,B=0;
+    for(var i=0;i<rows.length;i++)B=Math.max(B,rows[i].getBoundingClientRect().bottom-d.top);
     /* Cap the RING's width (it spans x 0.409-0.890 of the source), not the whole
        image box — the empty left backdrop may clip past the panel edge. */
     var h=(B-T)/(BOT-TOP),w=h*AR,max=d.width*0.72/0.481;
